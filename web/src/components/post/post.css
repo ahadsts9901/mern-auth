@@ -376,3 +376,9 @@ p.regards.center {
 .bi-eye {
     font-size: 2em !important;
 }
+
+.see {
+    color: #888;
+    margin-left: 0.5em;
+    cursor: pointer;
+}

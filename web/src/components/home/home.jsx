@@ -8,12 +8,11 @@ import { useNavigate } from 'react-router-dom';
 const Home = () => {
   const [posts, setPosts] = useState([]);
   const searchInputRef = useRef(null)
-  const me = ""
   const navigate = useNavigate()
 
   useEffect(() => {
     renderPost();
-  }, [me]);
+  }, []);
 
   const createPost = (event) => {
     event.preventDefault();
