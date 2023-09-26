@@ -63,7 +63,9 @@ const Login = () => {
 
   return (
     <form className="login c jcc ais login-signup" onSubmit={login}>
-      <h2 className="center">Welcome Back</h2>
+      <div>
+        <h2 className="center">Welcome Back</h2>
+      </div>
       <input
         required
         id="email-login"
@@ -89,7 +91,7 @@ const Login = () => {
           onClick={() => setShowPassword(!isShowPassword)}
         ></i>
       </div>
-      <p className='forget'>Forgot Password</p>
+      {/* <p className='forget'>Forgot Password</p> */}
       <p className="validationMessage">{validationMessage}</p>
       <button type="submit" className="button">
         Login

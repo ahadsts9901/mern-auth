@@ -403,7 +403,8 @@ h2.green {
     background-color: #553c51 !important;
     color: #fff !important;
     padding: 0.5em;
-    font-size: 0.7em !important;
+    font-size: 0.8em !important;
+    border: none;
     width: 3em !important;
     height: fit-content;
     border-radius: 5px !important;
@@ -534,13 +535,6 @@ div:where(.swal2-container) div:where(.swal2-loader) {
     border: 1px solid #553c51 !important;
 }
 
-svg.actionButton {
-    width: 2em !important;
-    font-size: 0.8em !important;
-    padding: 1em 1.5em !important;
-    color: #fff!important;
-}
-
 .bi-eye-slash,
 .bi-eye {
     font-size: 2em !important;
@@ -549,9 +543,4 @@ svg.actionButton {
 .textarea {
     min-width: 100%;
     max-width: 100%;
-}
-
-div.space-around>.actionButton {
-    color: #fff !important;
-    width: 2em !important;
 }

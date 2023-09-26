@@ -53,7 +53,13 @@ const Home = () => {
         setPosts(fetchedPosts);
       })
       .catch(function (error) {
-        console.log(error);
+        // console.log(error);
+        let resStatus = error.response.request.status
+        // console.log(resStatus)
+        if (resStatus === 401) {
+          // console.log("not authorized")
+          navigate('/login');
+        }
       });
   };
 
@@ -252,7 +258,7 @@ const Home = () => {
     e.preventDefault();
     try {
       const response = await axios.get(`/api/v1/search?q=${searchInputRef.current.value}`);
-      // console.log(response.data);
+      console.log(response.data);
 
       setPosts([...response.data]);
     } catch (error) {

@@ -336,11 +336,21 @@ div:where(.swal2-container) div:where(.swal2-loader) {
     margin: none !important;
     justify-content: space-between;
     align-items: center;
-    min-width: 250px;
-    max-width: 425px;
+    width: 100%;
+    /* min-width: 250px;
+    max-width: 425px; */
     border-radius: 0 !important;
     font-size: 0.7em;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 19px 38px, rgba(0, 0, 0, 0.25) 0px 15px 12px;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 19px 38px, rgba(0, 0, 0, 0.25) 0px 15px 12px; */
+}
+
+.login-signup>* {
+    min-width: 250px;
+    max-width: 425px;
+}
+
+.login-signup>div {
+    width: 425px;
 }
 
 .login-signup a,
@@ -491,8 +501,15 @@ form {
     background-color: #553c51 !important;
     color: #fff !important;
     padding: 0.5em;
-    font-size: 0.7em !important;
+    font-size: 0.8em !important;
+    border: none;
     width: 3em !important;
     height: fit-content;
     border-radius: 5px !important;
+}
+
+@media only screen and (max-width:425px) {
+    .login-signup>div {
+        width: 100%;
+    }
 }

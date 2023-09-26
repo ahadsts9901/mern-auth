@@ -13,8 +13,8 @@ const Post = (props) => {
             <p className="scroll">{props.text}</p>
             <div className="space-around">
                 <p className="regards">Regards! Muhammad Ahad</p>
-                <TrashFill onClick={() => { props.del(props.postId) }} className="actionButton" color="#fff" />
-                <PencilFill onClick={() => { props.edit(props.postId) }} className="actionButton" color="#fff" />
+                <button onClick={() => { props.del(props.postId) }} className="actionButton"><TrashFill /></button>
+                <button onClick={() => { props.edit(props.postId) }} className="actionButton"><PencilFill /></button>
             </div>
         </div>
     );

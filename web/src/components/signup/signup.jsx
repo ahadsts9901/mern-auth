@@ -90,7 +90,9 @@ const Signup = () => {
 
   return (
     <form className="signup c jcc ais login-signup" onSubmit={signup}>
-      <h2 className="center">Create Account</h2>
+      <div>
+        <h2 className="center">Create Account</h2>
+      </div>
       <input
         ref={firstNameRef}
         required
