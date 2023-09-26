@@ -16,29 +16,29 @@ app.use(cookieParser()); // cookie parser
 app.use("/api/v1", authRouter)
 app.use(express.static(path.join(__dirname, 'web/build')))
 
-// app.use((req, res, next) => {
-//     console.log("cookies: ", req.cookies);
+app.use((req, res, next) => {
+    console.log("cookies: ", req.cookies);
 
-//     const token = req.cookies.token;
+    const token = req.cookies.token;
 
-//     try {
-//         const decoded = jwt.verify(token, process.env.SECRET);
-//         console.log("decoded: ", decoded);
+    try {
+        const decoded = jwt.verify(token, process.env.SECRET);
+        console.log("decoded: ", decoded);
 
-//         req.body.decoded = {
-//             firstName: decoded.firstName,
-//             lastName: decoded.lastName,
-//             email: decoded.email,
-//             isAdmin: decoded.isAdmin,
-//         };
+        req.body.decoded = {
+            firstName: decoded.firstName,
+            lastName: decoded.lastName,
+            email: decoded.email,
+            isAdmin: decoded.isAdmin,
+        };
 
-//         next();
+        next();
 
-//     } catch (err) {
-//         res.status(401).send(`not authenticated`)
-//     }
+    } catch (err) {
+        res.status(401).send(`not authenticated`)
+    }
 
-// })
+})
 
 app.use("/api/v1", postRouter)
 
