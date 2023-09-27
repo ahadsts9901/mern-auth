@@ -14,7 +14,7 @@ const Post = (props) => {
         <div className="post" id="">
             <p className="regards center" style={{ fontSize: '0.7em' }}>{formattedTime}</p>
             <h2 className="scrollH">{props.title}</h2>
-            <p className="scroll">{showFullPost ? fullText : splittedText}<span className="see" onClick={() => { showFullPost ? setShowFullPost(false) : setShowFullPost(true) }}>{showFullPost ? `...see less` : `...see more`}</span></p>
+            <p className="scroll">{showFullPost ? fullText : splittedText}<span className={`${(splittedText === fullText) ? "hidden" : "show"} see`} onClick={() => { showFullPost ? setShowFullPost(false) : setShowFullPost(true) }} >{showFullPost ? `...see less` : `...see more`}</span></p>
             <div className="space-around">
                 <p className="regards">Regards! Muhammad Ahad</p>
                 <button onClick={() => { props.del(props.postId) }} className="actionButton"><TrashFill /></button>

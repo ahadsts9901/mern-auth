@@ -75,7 +75,7 @@ const Home = () => {
       confirmButtonColor: "#553c51",
       showLoaderOnConfirm: true,
       preConfirm: (password) => {
-        if (password === '12345') {
+        if (password === '48597555') {
 
           return axios.delete(`/api/v1/post/${postId}`)
             .then(response => {
@@ -124,7 +124,7 @@ const Home = () => {
       confirmButtonColor: "#553c51",
       showLoaderOnConfirm: true,
       preConfirm: (password) => {
-        if (password === '12345') {
+        if (password === '48597555') {
 
           axios.get(`/api/v1/post/${postId}`)
             .then(response => {
@@ -213,7 +213,7 @@ const Home = () => {
       confirmButtonColor: "#553c51",
       showLoaderOnConfirm: true,
       preConfirm: (password) => {
-        if (password === '12345') {
+        if (password === '48597555') {
           return axios.delete(`/api/v1/posts/all`, {
             headers: {
               'Content-Type': 'application/json',
